@@ -26,7 +26,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{DOTNET_VERSION}} # Тут используем переменную
+          dotnet-version: ${{env.DOTNET_VERSION}} # Тут используем переменную
       
       # Шаг 3: Восстановить все зависимости
       - name: Restore deps
