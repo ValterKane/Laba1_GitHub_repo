@@ -11,7 +11,7 @@ on:
       - "develop"
 
 env:
-  DOTNET_VER: '9.0.x'
+  DOTNET_VERSION : '9.0'
   
 jobs:
   build-and-test:
@@ -26,7 +26,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{DOTNET_VER}} # Тут используем переменную
+          dotnet-version: ${{DOTNET_VERSION}} # Тут используем переменную
       
       # Шаг 3: Восстановить все зависимости
       - name: Restore deps
